@@ -22,7 +22,7 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53107
+54348
 -job-worker-count
 5
 -background-job-worker-count
@@ -68,7 +68,7 @@ Successfully changed project path to: /Users/admin/Desktop/UnityProjects/BuckleV
     "memorysetup-temp-allocator-size-gfx=262144"
 Player connection [8030970112]  Target information:
 
-Player connection [8030970112]  * "[IP] 192.168.7.46 [Port] 0 [Flags] 2 [Guid] 108070227 [EditorId] 108070227 [Version] 1048832 [Id] OSXEditor(0,Jameels-Mac.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+Player connection [8030970112]  * "[IP] 192.168.7.46 [Port] 0 [Flags] 2 [Guid] 2690651654 [EditorId] 2690651654 [Version] 1048832 [Id] OSXEditor(0,Jameels-Mac.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
 
 Player connection [8030970112] Host joined multi-casting on [225.0.0.222:54997]...
 Player connection [8030970112] Host joined alternative multi-casting on [225.0.0.222:34997]...
@@ -82,7 +82,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.76 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.29f1 (9fafe5c9db65)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/6000.0.29f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -97,54 +97,55 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/6000.0.29f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/6000.0.29f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/6000.0.29f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56213
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56796
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/6000.0.29f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/6000.0.29f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/6000.0.29f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/6000.0.29f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
-Registered in 0.001221 seconds.
-- Loaded All Assemblies, in  0.220 seconds
+Registered in 0.001260 seconds.
+- Loaded All Assemblies, in  0.225 seconds
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 [usbmuxd] Send listen message
 Native extension for iOS target not found
+2025-07-18 15:08:55.372 Unity[27796:1050408] [XcodeApplications] Failed to read NSDictionary from path h-C/Contents/Info.plist
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 58 ms
+Android Extension - Scanning For ADB Devices 68 ms
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.519 seconds
-Domain Reload Profiling: 740ms
-	BeginReloadAssembly (43ms)
+- Finished resetting the current domain, in  0.508 seconds
+Domain Reload Profiling: 734ms
+	BeginReloadAssembly (42ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (0ms)
-	RebuildCommonClasses (27ms)
+	RebuildCommonClasses (29ms)
 	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (27ms)
-	LoadAllAssembliesAndSetupDomain (115ms)
-		LoadAssemblies (43ms)
+	initialDomainReloadingComplete (28ms)
+	LoadAllAssembliesAndSetupDomain (117ms)
+		LoadAssemblies (42ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (113ms)
-			TypeCache.Refresh (111ms)
-				TypeCache.ScanAssembly (101ms)
+		AnalyzeDomain (115ms)
+			TypeCache.Refresh (114ms)
+				TypeCache.ScanAssembly (104ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (520ms)
+	FinalizeReload (509ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (490ms)
+		SetupLoadedEditorAssemblies (476ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (189ms)
+			InitializePlatformSupportModulesInManaged (185ms)
 			SetLoadedEditorAssemblies (3ms)
 			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (178ms)
-			ProcessInitializeOnLoadMethodAttributes (106ms)
-			AfterProcessingInitializeOnLoad (10ms)
+			ProcessInitializeOnLoadAttributes (175ms)
+			ProcessInitializeOnLoadMethodAttributes (104ms)
+			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (0ms)
@@ -153,10 +154,9 @@ Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.333 seconds
-Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+- Loaded All Assemblies, in  0.387 seconds
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
 Native extension for iOS target not found
-2025-07-18 14:33:01.308 Unity[26213:1017841] [XcodeApplications] Failed to read NSDictionary from path X/Contents/Info.plist
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
@@ -173,68 +173,135 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (
 
 (Filename: Assets/PicoMobileSDK/Pvr_UnitySDK/Editor/Pvr_UnitySDKBuildCheck.cs Line: 29)
 
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.557 seconds
-Domain Reload Profiling: 890ms
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.588 seconds
+Domain Reload Profiling: 975ms
 	BeginReloadAssembly (81ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (26ms)
-	RebuildCommonClasses (26ms)
+	RebuildCommonClasses (27ms)
 	RebuildNativeTypeToScriptingClass (9ms)
 	initialDomainReloadingComplete (21ms)
-	LoadAllAssembliesAndSetupDomain (197ms)
-		LoadAssemblies (142ms)
+	LoadAllAssembliesAndSetupDomain (249ms)
+		LoadAssemblies (161ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (87ms)
-			TypeCache.Refresh (70ms)
-				TypeCache.ScanAssembly (57ms)
-			BuildScriptInfoCaches (13ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (558ms)
+		AnalyzeDomain (120ms)
+			TypeCache.Refresh (93ms)
+				TypeCache.ScanAssembly (78ms)
+			BuildScriptInfoCaches (20ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (588ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (462ms)
+		SetupLoadedEditorAssemblies (490ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (2ms)
-			BeforeProcessingInitializeOnLoad (18ms)
-			ProcessInitializeOnLoadAttributes (394ms)
-			ProcessInitializeOnLoadMethodAttributes (34ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (23ms)
+			ProcessInitializeOnLoadAttributes (415ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
 			AfterProcessingInitializeOnLoad (2ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (2ms)
 Launching external process: /Applications/Unity/Hub/Editor/6000.0.29f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.57 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 2345 unused Assets / (0.6 MB). Loaded Objects now: 2846.
-Memory consumption went from 88.7 MB to 88.1 MB.
-Total: 5.984042 ms (FindLiveObjects: 0.336125 ms CreateObjectMapping: 0.157291 ms MarkObjects: 4.996083 ms  DeleteObjects: 0.493958 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 77218.820551 seconds.
-  path: Assets/PicoMobileSDK/Pvr_Controller/Resources/Prefabs/Goblin.prefab
-  artifactKey: Guid(97d0c360e5e953e418040d87a3ebd1cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PicoMobileSDK/Pvr_Controller/Resources/Prefabs/Goblin.prefab using Guid(97d0c360e5e953e418040d87a3ebd1cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'da68abc042119a7e54f358bc46cbe60d') in 0.196777667 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 96
+Unloading 3633 unused Assets / (0.7 MB). Loaded Objects now: 4136.
+Memory consumption went from 97.8 MB to 97.1 MB.
+Total: 4.913500 ms (FindLiveObjects: 0.420625 ms CreateObjectMapping: 0.156708 ms MarkObjects: 3.828042 ms  DeleteObjects: 0.507791 ms)
 
 ========================================================================
 Received Prepare
+Assembly with name 'Unity.XR.CoreUtils.CodeSamples.Tests' already exists (Packages/com.unity.xr.core-utils/Tests/CodeSamples/Unity.XR.CoreUtils.CodeSamples.Tests.asmdef)
+Assembly with name 'Unity.XR.CoreUtils.CodeSamples.Tests' already exists (Packages/com.unity.xr.core-utils/Tests/Editor/CodeSamples/Unity.XR.CoreUtils.CodeSamples.Tests.asmdef)
+Uploading Crash Report
+ArgumentException: An item with the same key has already been added. Key: 7870a2ee9789f42f180ed4aff3154d02
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <3aacbe608a2f468eb6bb1c15e219490d>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <3aacbe608a2f468eb6bb1c15e219490d>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00029] in <705d087bf4254af9b48f07cfba1c906e>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00051] in <705d087bf4254af9b48f07cfba1c906e>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector) [0x00000] in <705d087bf4254af9b48f07cfba1c906e>:0 
+  at UnityEditor.Scripting.ScriptCompilation.AssemblyGraphBuilder.Initialize (System.Collections.Generic.IReadOnlyCollection`1[T] assemblies, System.Collections.Generic.IReadOnlyCollection`1[T] customScriptAssemblyReferences) [0x00046] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/AssemblyGraphBuilder.cs:85 
+  at UnityEditor.Scripting.ScriptCompilation.AssemblyGraphBuilderFactory.GetOrCreate (System.String projectPath, System.Collections.Generic.IReadOnlyCollection`1[T] assemblies, System.Collections.Generic.IReadOnlyCollection`1[T] customScriptAssemblyReferences) [0x00038] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/AssemblyGraphBuilderFactory.cs:54 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilation.GetAssemblyGraphBuilder () [0x00001] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:169 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilation.SetAllScripts (System.String[] allScripts) [0x0000d] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:177 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface.SetAllScripts (System.String[] allScripts) [0x00001] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilationInterface.cs:79 
+
+(Filename: /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/AssemblyGraphBuilder.cs Line: 85)
+
+Assembly with name 'Unity.XR.CoreUtils.CodeSamples.Tests' already exists (Packages/com.unity.xr.core-utils/Tests/CodeSamples/Unity.XR.CoreUtils.CodeSamples.Tests.asmdef)
+Assembly with name 'Unity.XR.CoreUtils.CodeSamples.Tests' already exists (Packages/com.unity.xr.core-utils/Tests/Editor/CodeSamples/Unity.XR.CoreUtils.CodeSamples.Tests.asmdef)
+ArgumentException: An item with the same key has already been added. Key: 7870a2ee9789f42f180ed4aff3154d02
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <3aacbe608a2f468eb6bb1c15e219490d>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <3aacbe608a2f468eb6bb1c15e219490d>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00029] in <705d087bf4254af9b48f07cfba1c906e>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00051] in <705d087bf4254af9b48f07cfba1c906e>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector) [0x00000] in <705d087bf4254af9b48f07cfba1c906e>:0 
+  at UnityEditor.Scripting.ScriptCompilation.AssemblyGraphBuilder.Initialize (System.Collections.Generic.IReadOnlyCollection`1[T] assemblies, System.Collections.Generic.IReadOnlyCollection`1[T] customScriptAssemblyReferences) [0x00046] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/AssemblyGraphBuilder.cs:85 
+  at UnityEditor.Scripting.ScriptCompilation.AssemblyGraphBuilderFactory.GetOrCreate (System.String projectPath, System.Collections.Generic.IReadOnlyCollection`1[T] assemblies, System.Collections.Generic.IReadOnlyCollection`1[T] customScriptAssemblyReferences) [0x00038] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/AssemblyGraphBuilderFactory.cs:54 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilation.GetAssemblyGraphBuilder () [0x00001] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:169 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilation.SetAllScripts (System.String[] allScripts) [0x0000d] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:177 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface.SetAllScripts (System.String[] allScripts) [0x00001] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilationInterface.cs:79 
+
+(Filename: /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/AssemblyGraphBuilder.cs Line: 85)
+
 Begin MonoManager ReloadAssembly
-Thread 0x2adb87000 may have been prematurely finalized
+Thread 0x2a8987000 may have been prematurely finalized
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.271 seconds
-Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+- Loaded All Assemblies, in  0.375 seconds
+Assembly with name 'Unity.XR.CoreUtils.CodeSamples.Tests' already exists (Packages/com.unity.xr.core-utils/Tests/CodeSamples/Unity.XR.CoreUtils.CodeSamples.Tests.asmdef)
+Assembly with name 'Unity.XR.CoreUtils.CodeSamples.Tests' already exists (Packages/com.unity.xr.core-utils/Tests/Editor/CodeSamples/Unity.XR.CoreUtils.CodeSamples.Tests.asmdef)
+ArgumentException: An item with the same key has already been added. Key: 7870a2ee9789f42f180ed4aff3154d02
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <3aacbe608a2f468eb6bb1c15e219490d>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <3aacbe608a2f468eb6bb1c15e219490d>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00029] in <705d087bf4254af9b48f07cfba1c906e>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00051] in <705d087bf4254af9b48f07cfba1c906e>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector) [0x00000] in <705d087bf4254af9b48f07cfba1c906e>:0 
+  at UnityEditor.Scripting.ScriptCompilation.AssemblyGraphBuilder.Initialize (System.Collections.Generic.IReadOnlyCollection`1[T] assemblies, System.Collections.Generic.IReadOnlyCollection`1[T] customScriptAssemblyReferences) [0x00046] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/AssemblyGraphBuilder.cs:85 
+  at UnityEditor.Scripting.ScriptCompilation.AssemblyGraphBuilderFactory.GetOrCreate (System.String projectPath, System.Collections.Generic.IReadOnlyCollection`1[T] assemblies, System.Collections.Generic.IReadOnlyCollection`1[T] customScriptAssemblyReferences) [0x00038] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/AssemblyGraphBuilderFactory.cs:54 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilation.GetAssemblyGraphBuilder () [0x00001] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:169 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilation.SetAllScripts (System.String[] allScripts) [0x0000d] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:177 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface.SetAllScripts (System.String[] allScripts) [0x00001] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilationInterface.cs:79 
+
+(Filename: /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/AssemblyGraphBuilder.cs Line: 85)
+
+Refreshing native plugins compatible for Editor in 1.02 ms, found 3 plugins.
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
+Assembly with name 'Unity.XR.CoreUtils.CodeSamples.Tests' already exists (Packages/com.unity.xr.core-utils/Tests/CodeSamples/Unity.XR.CoreUtils.CodeSamples.Tests.asmdef)
+Assembly with name 'Unity.XR.CoreUtils.CodeSamples.Tests' already exists (Packages/com.unity.xr.core-utils/Tests/Editor/CodeSamples/Unity.XR.CoreUtils.CodeSamples.Tests.asmdef)
+ArgumentException: An item with the same key has already been added. Key: 7870a2ee9789f42f180ed4aff3154d02
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <3aacbe608a2f468eb6bb1c15e219490d>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <3aacbe608a2f468eb6bb1c15e219490d>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00029] in <705d087bf4254af9b48f07cfba1c906e>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00051] in <705d087bf4254af9b48f07cfba1c906e>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Func`2[T,TResult] elementSelector) [0x00000] in <705d087bf4254af9b48f07cfba1c906e>:0 
+  at UnityEditor.Scripting.ScriptCompilation.AssemblyGraphBuilder.Initialize (System.Collections.Generic.IReadOnlyCollection`1[T] assemblies, System.Collections.Generic.IReadOnlyCollection`1[T] customScriptAssemblyReferences) [0x00046] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/AssemblyGraphBuilder.cs:85 
+  at UnityEditor.Scripting.ScriptCompilation.AssemblyGraphBuilderFactory.GetOrCreate (System.String projectPath, System.Collections.Generic.IReadOnlyCollection`1[T] assemblies, System.Collections.Generic.IReadOnlyCollection`1[T] customScriptAssemblyReferences) [0x00038] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/AssemblyGraphBuilderFactory.cs:54 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilation.GetAssemblyGraphBuilder () [0x00001] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:169 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilation.SetAllScripts (System.String[] allScripts) [0x0000d] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:177 
+  at UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface.SetAllScripts (System.String[] allScripts) [0x00001] in /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilationInterface.cs:79 
+
+(Filename: /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/AssemblyGraphBuilder.cs Line: 85)
+
 [Build Check] RegisterBuildPlayerHandler,Already Do not show: False
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
@@ -248,45 +315,203 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (
 
 (Filename: Assets/PicoMobileSDK/Pvr_UnitySDK/Editor/Pvr_UnitySDKBuildCheck.cs Line: 29)
 
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.467 seconds
-Domain Reload Profiling: 739ms
-	BeginReloadAssembly (86ms)
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.541 seconds
+Domain Reload Profiling: 917ms
+	BeginReloadAssembly (96ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (33ms)
-	RebuildCommonClasses (23ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (11ms)
-	LoadAllAssembliesAndSetupDomain (143ms)
-		LoadAssemblies (116ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (13ms)
+	LoadAllAssembliesAndSetupDomain (231ms)
+		LoadAssemblies (171ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (53ms)
-			TypeCache.Refresh (4ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (45ms)
-			ResolveRequiredComponents (2ms)
-	FinalizeReload (467ms)
+		AnalyzeDomain (89ms)
+			TypeCache.Refresh (26ms)
+				TypeCache.ScanAssembly (19ms)
+			BuildScriptInfoCaches (56ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (541ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (371ms)
+		SetupLoadedEditorAssemblies (437ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (10ms)
+			InitializePlatformSupportModulesInManaged (11ms)
 			SetLoadedEditorAssemblies (2ms)
-			BeforeProcessingInitializeOnLoad (15ms)
-			ProcessInitializeOnLoadAttributes (314ms)
-			ProcessInitializeOnLoadMethodAttributes (28ms)
+			BeforeProcessingInitializeOnLoad (14ms)
+			ProcessInitializeOnLoadAttributes (378ms)
+			ProcessInitializeOnLoadMethodAttributes (29ms)
 			AfterProcessingInitializeOnLoad (2ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (2ms)
-Refreshing native plugins compatible for Editor in 0.48 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
+Refreshing native plugins compatible for Editor in 1.90 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 1039.43 ms.
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 2343 unused Assets / (430.9 KB). Loaded Objects now: 2862.
-Memory consumption went from 97.8 MB to 97.4 MB.
-Total: 3.896750 ms (FindLiveObjects: 0.133292 ms CreateObjectMapping: 0.078250 ms MarkObjects: 3.339834 ms  DeleteObjects: 0.344958 ms)
+Unloading 3649 unused Assets / (134.7 KB). Loaded Objects now: 4163.
+Memory consumption went from 98.7 MB to 98.6 MB.
+Total: 4.864167 ms (FindLiveObjects: 0.220042 ms CreateObjectMapping: 0.132083 ms MarkObjects: 3.981417 ms  DeleteObjects: 0.530209 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 79278.446571 seconds.
+  path: Assets/UI/2D Passengers/1.png
+  artifactKey: Guid(7e88a2e2011e67b4fa33cbfe8da41a9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/2D Passengers/1.png using Guid(7e88a2e2011e67b4fa33cbfe8da41a9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '56eef6eaf052b82bf35031001f591584') in 0.065104875 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/UI/2D Passengers/3.png
+  artifactKey: Guid(decacd8909e84a2478c6f08531c7d625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/2D Passengers/3.png using Guid(decacd8909e84a2478c6f08531c7d625) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bd07456c97fab0c6bcf60c9bbddb5911') in 0.007129584 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/UI/Loading/1.png
+  artifactKey: Guid(ee53691991ba9d146bc70c2548f0801a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Loading/1.png using Guid(ee53691991ba9d146bc70c2548f0801a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e8e855b492545920fc7e566388b25123') in 0.005101042 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/PicoMobileSDK/Pvr_UnitySDK/Resources/360.jpg
+  artifactKey: Guid(39ae30eb07b771b43a50afda13c4edb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PicoMobileSDK/Pvr_UnitySDK/Resources/360.jpg using Guid(39ae30eb07b771b43a50afda13c4edb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0783a0acb0c2347af81e92dff9ff43c9') in 0.004042167 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/UI/2D Passengers/3b.png
+  artifactKey: Guid(7ae2e7ba4f50b964ebdff10d17aefd9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/2D Passengers/3b.png using Guid(7ae2e7ba4f50b964ebdff10d17aefd9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '57eeb855f80249ab73a883144fbefda2') in 0.006412625 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/UI/2D Passengers/7.png
+  artifactKey: Guid(6c874c8db9325cc41bcb4081f907b8c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/2D Passengers/7.png using Guid(6c874c8db9325cc41bcb4081f907b8c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3e647976cb43d67d349e012d947ffe6a') in 0.008504583 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/UI/2D Passengers/4.png
+  artifactKey: Guid(8171202330dc02643a7357d5c4790f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/2D Passengers/4.png using Guid(8171202330dc02643a7357d5c4790f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd823fef53cba01fddc1c12e69468241a') in 0.011460875 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/UI/2D Passengers/18.png
+  artifactKey: Guid(b872c09ff6472284da0bdc36be733cfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/2D Passengers/18.png using Guid(b872c09ff6472284da0bdc36be733cfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a1b053cfdf5172ba69eb412a32c0de3b') in 0.007881792 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/UI/2D Passengers/13.png
+  artifactKey: Guid(331305f3d8460704c9b09473ed645d49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/2D Passengers/13.png using Guid(331305f3d8460704c9b09473ed645d49) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ef73c0ecdcc876c3cdd2ccf166d8cacc') in 0.01739275 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000088 seconds.
+  path: Assets/UI/2D Passengers/2b.png
+  artifactKey: Guid(ff7673ab1fb35984f8bc00231ac3627e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/2D Passengers/2b.png using Guid(ff7673ab1fb35984f8bc00231ac3627e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f007888d3fef05fe7bc1ec4645698aa1') in 0.012966917 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000088 seconds.
+  path: Assets/UI/2D Passengers/4b.png
+  artifactKey: Guid(81dd9192c16e97a47851fae2a2936992) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/2D Passengers/4b.png using Guid(81dd9192c16e97a47851fae2a2936992) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0490c6c3e8a7a5f83f92875cc43af370') in 0.010013875 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/UI/2D Passengers/17.png
+  artifactKey: Guid(e438fff2b0af1674bafe85cad3812c55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/2D Passengers/17.png using Guid(e438fff2b0af1674bafe85cad3812c55) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '88e822a9b99c6bbd7928b8847331ebf4') in 0.008718208 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/UI/2D Passengers/14b.png
+  artifactKey: Guid(ce8f1e9b5d6062c42b09fc40df9a0d6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/2D Passengers/14b.png using Guid(ce8f1e9b5d6062c42b09fc40df9a0d6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bacd7e7bfc26a6d55e17be851bebc517') in 0.011402791 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/UI/NewUI/3.png
+  artifactKey: Guid(a4b6eb2a0d9b2a74594cc969ca1f6ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/NewUI/3.png using Guid(a4b6eb2a0d9b2a74594cc969ca1f6ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8977493c0d52b2a77da9362c7cec7d1b') in 0.005338167 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/UI/2D Passengers/8b.png
+  artifactKey: Guid(dd103fc4baa8e2d4aaa934c30b693e6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/2D Passengers/8b.png using Guid(dd103fc4baa8e2d4aaa934c30b693e6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8348d631127eb29e9bae3a28b40455c7') in 0.010192583 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000080 seconds.
+  path: Assets/UI/2D Passengers/17b.png
+  artifactKey: Guid(9c1d2be765910be488333f5134b7ac93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/2D Passengers/17b.png using Guid(9c1d2be765910be488333f5134b7ac93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c148c33a7a76a86f625473128247b668') in 0.010799916 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/UI/2D Passengers/15b.png
+  artifactKey: Guid(b51984913c0069c4a8ab7b1d2063b129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/2D Passengers/15b.png using Guid(b51984913c0069c4a8ab7b1d2063b129) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd239b4772269816b855e798557812537') in 0.0084645 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/UI/2D Passengers/11.png
+  artifactKey: Guid(a89a201d891b74e409986ed3e428aa6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/2D Passengers/11.png using Guid(a89a201d891b74e409986ed3e428aa6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '23bf0fda24c76b97c66743ea3cb7aef3') in 0.0085345 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/UI/NewUI/2.png
+  artifactKey: Guid(2c697a4a64de33845833a404ac3a9c6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/NewUI/2.png using Guid(2c697a4a64de33845833a404ac3a9c6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fba4e25d57cfc5fe813d27bd132f7aa2') in 0.004978041 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
