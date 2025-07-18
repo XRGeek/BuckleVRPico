@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using UnityEngine.VR;
+//using UnityEngine.VR;
 using VRStandardAssets.Common;
 
 namespace VRStandardAssets.Flyer

@@ -14,7 +14,7 @@ using UnityEngine.Rendering;
 using System.Linq;
 
 using System.Runtime.InteropServices;
-using UnityEngine.Networking.Types;
+//using UnityEngine.Networking.Types;
 using Debug = UnityEngine.Debug;
 
 [InitializeOnLoad] 

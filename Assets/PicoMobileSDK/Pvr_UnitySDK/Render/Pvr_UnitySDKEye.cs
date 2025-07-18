@@ -135,7 +135,7 @@ public class Pvr_UnitySDKEye : MonoBehaviour
             UnityEngine.Experimental.Rendering.RenderPipeline.beginCameraRendering += MyPreRender;
 #endif
 #if UNITY_2019_1_OR_NEWER
-        if (UnityEngine.Rendering.GraphicsSettings.renderPipelineAsset != null)
+        if (UnityEngine.Rendering.GraphicsSettings.defaultRenderPipeline != null)
         {
             RenderPipelineManager.beginCameraRendering += MyPreRender;
             RenderPipelineManager.endCameraRendering += MyPostRender;
@@ -150,7 +150,7 @@ public class Pvr_UnitySDKEye : MonoBehaviour
             UnityEngine.Experimental.Rendering.RenderPipeline.beginCameraRendering -= MyPreRender;
 #endif
 #if UNITY_2019_1_OR_NEWER
-        if (UnityEngine.Rendering.GraphicsSettings.renderPipelineAsset != null)
+        if (UnityEngine.Rendering.GraphicsSettings.defaultRenderPipeline != null)
         {
             RenderPipelineManager.beginCameraRendering -= MyPreRender;
             RenderPipelineManager.endCameraRendering -= MyPostRender;

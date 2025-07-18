@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.VR;
+//using UnityEngine.VR;
 using VRStandardAssets.Utils;
 
 namespace VRStandardAssets.ShootingGallery
