@@ -1801,6 +1801,7 @@ GameObject:
   - component: {fileID: 6859922947096900831}
   - component: {fileID: 5733303066685772912}
   - component: {fileID: 4462855609521833902}
+  - component: {fileID: 6859922947096900832}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -1878,6 +1879,19 @@ Transform:
   - {fileID: 7224449208358445022}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -41.2, z: 0}
+--- !u!114 &6859922947096900832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6450043375364389794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d4e1f5cd71254c64866d2a5f6bd4500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damping: 5
 --- !u!120 &7099080252330379763
 LineRenderer:
   serializedVersion: 2
