@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR;
 public class ScoreManager : MonoBehaviour {
 	
 	public TextMesh scoreText;
@@ -25,32 +26,32 @@ public class ScoreManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(scoreText!=null){
-			
-			scoreText.text = "" + score;
-		}
-		
-		if (Pvr_UnitySDKAPI.Controller.UPvr_GetKeyDown(0, Pvr_UnitySDKAPI.Pvr_KeyCode.TRIGGER))
-		{
-			if (isGameEnded)
-			{
-				Debug.Log("Restarting");
-				SceneCreator.instance.SetActiveMenu(true);
-				SceneCreator.instance.roof.SetActive(true);
-				SceneCreator.instance.SetActiveGamePlay(false);
-			}
-		
-		}
-		if (Pvr_UnitySDKAPI.Controller.UPvr_GetKeyDown(0, Pvr_UnitySDKAPI.Pvr_KeyCode.TRIGGER))
-		{
-			if (isGameEnded)
-			{
-				Debug.Log("Restarting");
-				SceneCreator.instance.SetActiveMenu(true);
-				SceneCreator.instance.roof.SetActive(true);
-				SceneCreator.instance.SetActiveGamePlay(false);
-			}
-		}
+		// ✅ Update score text
+        if (scoreText != null)
+        {
+            scoreText.text = score.ToString();
+        }
+
+        // ✅ Check right controller trigger press (for Quest 3S)
+        var rightHandDevices = new List<InputDevice>();
+        InputDevices.GetDevicesAtXRNode(XRNode.RightHand, rightHandDevices);
+
+        foreach (var device in rightHandDevices)
+        {
+            if (device.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerPressed) && triggerPressed)
+            {
+                if (isGameEnded)
+                {
+                    Debug.Log("Restarting");
+
+                    SceneCreator.instance.SetActiveMenu(true);
+                    SceneCreator.instance.roof.SetActive(true);
+                    SceneCreator.instance.SetActiveGamePlay(false);
+
+                    isGameEnded = false; // Reset if needed
+                }
+            }
+        }
 
 
 	}
