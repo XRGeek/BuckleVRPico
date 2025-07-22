@@ -5,25 +5,27 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR;
 
-public class MenuRay : MonoBehaviour {
-	[SerializeField] private Transform m_End;     
-	[SerializeField] private float m_Damping = 0.5f;  
-	private const float k_DampingCoef = -20f;   
-	[SerializeField] private LineRenderer m_Flare;    
-	[SerializeField] private float m_DefaultLineLength = 70f;   
+public class MenuRay : MonoBehaviour
+{
+	[SerializeField] private Transform m_End;
+	[SerializeField] private float m_Damping = 0.5f;
+	private const float k_DampingCoef = -20f;
+	[SerializeField] private LineRenderer m_Flare;
+	[SerializeField] private float m_DefaultLineLength = 70f;
 	[SerializeField] Material defaultLaser;
 	[SerializeField] Material selectLaser;
 
 	bool isCharacterLocked;
 	private bool isDeafaultLaser;
 	RaycastHit hitInfo;
-	Ray ray;	
+	Ray ray;
 	GameObject currentRider;
 
 	private bool previousTriggerState = false;
 
-	void Start () {
-		m_End.GetComponent<LineRenderer> ().enabled = false;
+	void Start()
+	{
+		m_End.GetComponent<LineRenderer>().enabled = false;
 		isCharacterLocked = false;
 		isDeafaultLaser = true;
 		float lineLength = m_DefaultLineLength;
@@ -31,7 +33,8 @@ public class MenuRay : MonoBehaviour {
 		m_Flare.SetPosition(1, m_End.position + m_End.forward * lineLength);
 	}
 
-	void Update () {
+	void Update()
+	{
 
 		float lineLength = m_DefaultLineLength;
 		m_End.GetComponent<LineRenderer>().SetPosition(0, m_End.position);
@@ -40,15 +43,19 @@ public class MenuRay : MonoBehaviour {
 		m_Flare.SetPosition(0, m_End.position);
 		m_Flare.SetPosition(1, m_End.position + m_End.forward * lineLength);
 
-		ray = GetRay ();
-		if (Physics.Raycast (ray, out hitInfo)) {
+		ray = GetRay();
+		if (Physics.Raycast(ray, out hitInfo))
+		{
 
-			if(hitInfo.collider.tag=="SelectBG" || hitInfo.collider.tag=="click1" || hitInfo.collider.tag=="click2" || hitInfo.collider.tag=="click3"){
-				Debug.Log ("Testing");
+			if (hitInfo.collider.CompareTag("SelectBG") || hitInfo.collider.CompareTag("click1") || hitInfo.collider.CompareTag("click2") || hitInfo.collider.CompareTag("click3"))
+			{
+				Debug.Log("Testing");
 
-				if (!isCharacterLocked) {	
-					if (Input.GetMouseButton (0)) {
-						CharacterselectedLaser ();
+				if (!isCharacterLocked)
+				{
+					if (Input.GetMouseButton(0))
+					{
+						CharacterselectedLaser();
 						isCharacterLocked = true;
 					}
 					if (IsTriggerHeld())
@@ -60,18 +67,18 @@ public class MenuRay : MonoBehaviour {
 
 				currentRider = hitInfo.transform.parent.gameObject.transform.parent.gameObject;
 
-				if(Input.GetMouseButton(0))
+				if (Input.GetMouseButton(0))
 				{
-					if(hitInfo.collider.tag=="click1")
-						currentRider.GetComponent<Spawner> ().EnableClick1 ();
+					if (hitInfo.collider.tag == "click1")
+						currentRider.GetComponent<Spawner>().EnableClick1();
 
-					if(hitInfo.collider.tag=="click2" && currentRider.GetComponent<Spawner> ().CheackClcik1() )
-						currentRider.GetComponent<Spawner> ().EnableClick2 ();
+					if (hitInfo.collider.tag == "click2" && currentRider.GetComponent<Spawner>().CheackClcik1())
+						currentRider.GetComponent<Spawner>().EnableClick2();
 
-					if(hitInfo.collider.tag=="click3" && currentRider.GetComponent<Spawner> ().CheackClcik2() )
-					{	
-						currentRider.GetComponent<Spawner> ().EnableClick3 ();
-						MakeLaserNoCharacterSelected ();
+					if (hitInfo.collider.tag == "click3" && currentRider.GetComponent<Spawner>().CheackClcik2())
+					{
+						currentRider.GetComponent<Spawner>().EnableClick3();
+						MakeLaserNoCharacterSelected();
 					}
 				}
 
@@ -92,82 +99,100 @@ public class MenuRay : MonoBehaviour {
 			}
 			else
 			{
-				MakeLaserNoCharacterSelected ();
-				
-				if(isDeafaultLaser){
+				MakeLaserNoCharacterSelected();
+
+				if (isDeafaultLaser)
+				{
 					isDeafaultLaser = false;
-					setDefaultLaser ();
+					setDefaultLaser();
 				}
-				if(currentRider!=null){
-					currentRider.GetComponent<Spawner> ().UnSelectAll();
+				if (currentRider != null)
+				{
+					currentRider.GetComponent<Spawner>().UnSelectAll();
 				}
 			}
-			
-			if (hitInfo.collider.tag == "Start") {
-				if (!isDeafaultLaser) {
-					selectedLaser ();
+
+			if (hitInfo.collider.tag == "Start")
+			{
+				if (!isDeafaultLaser)
+				{
+					selectedLaser();
 					isDeafaultLaser = true;
 				}
-				
+
 				if (IsTriggerPressed())
 				{
 					MenuManager.instance.StartGame();
 				}
 
-			} else if (hitInfo.collider.tag == "Begin") {
-				if (!isDeafaultLaser) {
-					selectedLaser ();
+			}
+			else if (hitInfo.collider.tag == "Begin")
+			{
+				if (!isDeafaultLaser)
+				{
+					selectedLaser();
 					isDeafaultLaser = true;
 				}
-				
+
 				if (IsTriggerPressed())
 				{
 					MenuManager.instance.Begin();
 				}
 
-			} else {
-				setDefaultLaser ();
+			}
+			else
+			{
+				setDefaultLaser();
 			}
 
-		} else {
-			if(currentRider!=null){
-				currentRider.GetComponent<Spawner> ().UnSelectAll();
+		}
+		else
+		{
+			if (currentRider != null)
+			{
+				currentRider.GetComponent<Spawner>().UnSelectAll();
 			}
-			MakeLaserNoCharacterSelected ();
+			MakeLaserNoCharacterSelected();
 			currentRider = null;
-			if(isDeafaultLaser){
+			if (isDeafaultLaser)
+			{
 				isDeafaultLaser = false;
-				setDefaultLaser ();
+				setDefaultLaser();
 			}
 		}
 	}
 
-	public void MakeLaserNoCharacterSelected(){
+	public void MakeLaserNoCharacterSelected()
+	{
 		isCharacterLocked = false;
 		m_Flare.enabled = true;
-		m_End.GetComponent<LineRenderer> ().enabled = false;
+		m_End.GetComponent<LineRenderer>().enabled = false;
 	}
 
-	public Ray GetRay(){
-		return new Ray (m_End.position,m_End.forward);
+	public Ray GetRay()
+	{
+		return new Ray(m_End.position, m_End.forward);
 	}
 
-	void setDefaultLaser(){
-		Debug.Log ("Default Laser");
+	void setDefaultLaser()
+	{
+		Debug.Log("Default Laser");
 		m_Flare.material = defaultLaser;
-		m_Flare.widthMultiplier=0.3f;
+		m_Flare.widthMultiplier = 0.3f;
 	}
 
-	void selectedLaser(){
-		Debug.Log ("Selected Laser");
-		m_Flare.widthMultiplier=0.8f;
+	void selectedLaser()
+	{
+		Debug.Log("Selected Laser");
+		m_Flare.widthMultiplier = 0.8f;
 		m_Flare.material = selectLaser;
 	}
 
-	public void CharacterselectedLaser(){
-		Debug.Log ("Character Selected Laser");
+	public void CharacterselectedLaser()
+	{
+		Debug.Log("Character Selected Laser");
 		m_Flare.enabled = false;
-		m_End.GetComponent<LineRenderer> ().enabled = true;
+		m_End.GetComponent<LineRenderer>().enabled = true;
 	}
 
 	private bool IsTriggerHeld()
@@ -189,4 +214,12 @@ public class MenuRay : MonoBehaviour {
 		}
 		return false;
 	}
+
+	IEnumerator RestartGame()
+	{
+		Debug.Log("Waiting for 2 seconds...");
+		yield return new WaitForSeconds(2f); // Delay for 2 seconds
+		Debug.Log("2 seconds passed!");
+		
+    }
 }

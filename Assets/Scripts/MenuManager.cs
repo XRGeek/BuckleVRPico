@@ -96,18 +96,6 @@ public class MenuManager : MonoBehaviour {
 		SceneCreator.instance.roof.SetActive(false);
 		SceneCreator.instance.SetActiveGamePlay(true);
 			
-		//SceneManager.LoadScene (1);
 	}
-	IEnumerator LoadYourAsyncScene()
-	{
-		// The Application loads the Scene in the background at the same time as the current Scene.
-		//This is particularly good for creating loading screens. You could also load the Scene by build //number.
-		AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("GamePlay");
 
-		//Wait until the last operation fully loads to return anything
-		while (!asyncLoad.isDone)
-		{
-			yield return null;
-		}
-	}
 }
