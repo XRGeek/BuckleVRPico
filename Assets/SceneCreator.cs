@@ -28,9 +28,7 @@ public class SceneCreator : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneCreator.instance.SetActiveMenu(true);
-            SceneCreator.instance.roof.SetActive(true);
-            SceneCreator.instance.SetActiveGamePlay(false);
+            RestartGame();
         }
     }
 
@@ -92,5 +90,23 @@ public class SceneCreator : MonoBehaviour
         }
     }
 
-    
+
+
+    public void RestartGame()
+    {
+        BlackSphereController.Instance.animator.Play("FadeIn");
+		StartCoroutine(RestartGameDelay());
+    }
+
+    IEnumerator RestartGameDelay()
+	{
+		Debug.Log("Waiting for 2 seconds...");
+		yield return new WaitForSeconds(4f); // Delay for 2 seconds
+        BlackSphereController.Instance.animator.Play("Fadeout");
+		SceneCreator.instance.SetActiveMenu(true);
+		SceneCreator.instance.roof.SetActive(true);
+		SceneCreator.instance.SetActiveGamePlay(false);
+		Debug.Log("2 seconds passed!");
+		
+    }
 }

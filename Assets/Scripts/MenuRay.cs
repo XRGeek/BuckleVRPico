@@ -215,11 +215,5 @@ public class MenuRay : MonoBehaviour
 		return false;
 	}
 
-	IEnumerator RestartGame()
-	{
-		Debug.Log("Waiting for 2 seconds...");
-		yield return new WaitForSeconds(2f); // Delay for 2 seconds
-		Debug.Log("2 seconds passed!");
-		
-    }
+	
 }
