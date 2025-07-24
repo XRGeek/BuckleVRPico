@@ -57,8 +57,10 @@ public class ScoreManager : MonoBehaviour
 	}
 	public void ShowFinalScore()
 	{
+
 		finalScoreText.text = score + "!";
 		isGameEnded = true;
+		scorePanel.transform.parent.gameObject.SetActive(false);
 	}
 	
 }
